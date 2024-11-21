@@ -57,13 +57,14 @@ header{
         div{
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             &.logo-hi{
                 max-width: 17.5rem;
+                justify-content: flex-start;
                 height: 1.5rem;
-                gap: 4.4rem;
+                gap: 1rem;
                 span{
-                    height: 1.875rem;
+                    height: 100%;
                     font-size: 1rem;
                     line-height: 1.5rem;
                     letter-spacing: -0.4px;
@@ -275,20 +276,18 @@ header{
     }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 640px){
     header{
         width: 100%;
         height: 60px;
         padding: 0;
         div{
-            width: 97%;
-            gap: 17%;
+            width: 100%;
+            padding: 0 1rem;
             div{
                 &.logo-hi{
-                    width: 26%;
+                    width: fit-content;
                     height: 1.875rem;
-                    padding-left: 1.5rem;
-                    justify-content: flex-start;
                     gap: 5%;
                     span{
                         display: flex;
@@ -303,6 +302,7 @@ header{
                     position: relative;
                     width: 140px;
                     height: 40px;
+                    display: none;
                     input{
                         width: 100%;
                         height: 100%;
@@ -317,7 +317,7 @@ header{
                     }
                 }
                 &.interactions{
-                    width: 26%;
+                    width: fit-content;
                     gap: 0.5rem;
                     button{
                         padding: 0.075rem 0.75rem;
@@ -331,63 +331,32 @@ header{
                             }
                         }
                     }
-                }
-
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 640px){
-    header{
-        width: 100%;
-        height: 55px;
-        padding: 0;
-        div{
-            width: 95%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20%;
-            div{
-                &.logo-hi{
-                    width: fit-content;
-                    height: 1.875rem;
-                    gap: 5%;
-                    span{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 1rem;
-                        line-height: 1rem;
-                        letter-spacing: -0.4px;
-                    }
-                }
-                &.searchbar{
-                    display: none;
-                }
-                &.interactions{
-                    width: fit-content;
-                    gap: 0.5rem;
-                    button{
-                        padding: 0.075rem 0.75rem;
+                    .notification{
+                        width: 1rem;
+                        height: 1rem;
+                        padding: 0;
                         span{
-                            &:first-child{
-                                font-weight: 500;
-                                font-size: 1rem;
-                            }
-                            &:last-child{
-                                display: none;
-                            }
+                            width: 0.5rem;
+                            height: 0.5rem;
+                            font-size: 0.5rem;
                         }
                     }
-                    .avatar{
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        img{
+                    .cart{
+                        width: 1rem;
+                        height: 1rem;
+                        padding: 0;
+                        svg{
                             width: 100%;
                             height: 100%;
                         }
+                    }
+                    .avatar{
+                        width: 1.75rem;
+                        height: 1.75rem;
+                        padding: 0;
+                        img{
+                            width: 100%;
+                            height: 100%;                        }
                     }
                 }
 
