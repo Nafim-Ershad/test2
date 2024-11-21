@@ -1,0 +1,19 @@
+// Varaibles
+@import "./_variables.scss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $dmSans;
+    font-optical-sizing: auto;
+}
+
+body{
+    overflow-y: hidden;
+}
